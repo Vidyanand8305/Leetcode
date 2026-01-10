@@ -5,9 +5,9 @@ public class Solution extends VersionControl {
         int ans = -1;
 
         while (low <= high) {
-            int mid = low + (high - low) / 2; // safer than (low+high)/2
+            int mid = low + (high - low) / 2; 
 
-            if (isBadVersion(mid)) {   // ✅ correct here
+            if (isBadVersion(mid)) {  
                 ans = mid;
                 high = mid - 1;
             } else {
