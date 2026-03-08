@@ -1,15 +1,22 @@
 class Solution {
     public int firstUniqChar(String s) {
-        StringBuilder sb = new StringBuilder(s);
-        for(int i=0;i<sb.length();i++){
-        char ch = sb.charAt(i);
-        if(sb.indexOf(String.valueOf(ch)) == sb.lastIndexOf(String.valueOf(ch))){
-            return i;
+       
+        HashMap<Character,Integer> map = new HashMap<>();
+        for(int i =0 ;i<s.length();i++){
+            char ch = s.charAt(i);
+        if(map.containsKey(ch)){
+            int oldf = map.get(ch);
+            map.put(ch,oldf+1);
+        }else{
+            map.put(ch, 1);
         }
-
-
         }
-        return -1;
-        
+        for(int i =0 ;i<s.length();i++){
+            char c = s.charAt(i);
+            if(map.get(c)==1){  
+                return i;
+            }
+        }
+return -1;
     }
 }
