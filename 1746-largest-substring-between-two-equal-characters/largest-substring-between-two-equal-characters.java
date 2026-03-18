@@ -4,7 +4,7 @@ class Solution {
     public int maxLengthBetweenEqualCharacters(String s) {
 
         HashMap<Character, Integer> map = new HashMap<>();
-        int max = -1;
+        int longest = -1;
 
  for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
@@ -13,10 +13,10 @@ class Solution {
        map.put(ch, i);
             } else {
                 int len = i - map.get(ch) - 1;
-                max = Math.max(max, len);
+            longest = Math.max(longest, len);
             }
         }
 
-        return max;
+        return longest;
     }
 }
