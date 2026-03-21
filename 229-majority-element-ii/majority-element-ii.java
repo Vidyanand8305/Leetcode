@@ -15,7 +15,6 @@ class Solution {
             }
         }
         int n = nums.length;
-        // convert keys to list
         List<Integer> keys = new ArrayList<>(map.keySet());
         for(int i = 0; i < keys.size(); i++){
             int key = keys.get(i);
