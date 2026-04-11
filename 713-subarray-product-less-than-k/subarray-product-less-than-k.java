@@ -8,10 +8,10 @@ class Solution {
             product *= nums[right];
             while (product >= k) {
                 product /= nums[left];
-                left++;
-            }
+                left++;         }
             count += (right - left + 1);
         }
         return count;
     }
 }
+
