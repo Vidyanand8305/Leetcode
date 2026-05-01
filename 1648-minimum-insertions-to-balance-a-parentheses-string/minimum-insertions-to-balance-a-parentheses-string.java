@@ -17,9 +17,7 @@ class Solution {
                 if (need == -1) {
                     res++;
                     need = 1;
-                }
-            }
-        }
+                          }          }       }
 
         return res + need;
     }
